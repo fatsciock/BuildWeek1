@@ -9,13 +9,27 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private LifeController _lifeController;
     //[SerializeField] private GameObject _player;
 
-    [SerializeField] private int _hp;
-    [SerializeField] private float _speed;
-    [SerializeField] private int _dmg;
+    [SerializeField] protected Rigidbody2D _rb;
+    [SerializeField] protected Collider2D _collider;
+
+    [SerializeField] protected float speed;
+    [SerializeField] protected int dmg;
     //[SerializeField] private bool _canShoot;
-    [SerializeField] private int _dropRate;
+    [SerializeField] protected int _dropRate;
+
+    protected Vector2 direction;
+    protected Vector2 position;
 
     [SerializeField] GameObject[] _weapons;
+
+    public virtual void Awake()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        if (_rb == null) Debug.Log("Manca il RigidBody!");
+
+        _collider = GetComponent<Collider2D>();
+        if (_collider == null) Debug.Log("Manca il collider!");
+    }
 
     public void DropWeapon()
     {
@@ -48,11 +62,5 @@ public abstract class Enemy : MonoBehaviour
     //    _player = GameObject.FindWithTag("Player");
     //}
 
-    public abstract void Move();
-
-    public Enemy(float speed, int hp, int dmg)
-    {
-        
-    }
-        
+    public abstract void Move();        
 }
