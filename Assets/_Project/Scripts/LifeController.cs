@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LifeController : MonoBehaviour
 {
-    public enum ON_DEFEAT_BEHAVIOUR { DISABLE = 0, DESTROY = 1, NONE = 2 }
+    public enum ON_DEFEAT_BEHAVIOUR { DISABLE = 0, DESTROY = 1, RESET = 2 }
 
     [SerializeField] private int _currentHp = 10;
     [SerializeField] private int _maxHp = 10;
@@ -40,9 +40,11 @@ public class LifeController : MonoBehaviour
                         gameObject.SetActive(false);
                         break;
                     case ON_DEFEAT_BEHAVIOUR.DESTROY:
+                        gameObject.GetComponent<EnemyBase>().DropWeapon();
                         Destroy(gameObject);
                         break;
-                    case ON_DEFEAT_BEHAVIOUR.NONE:
+                    case ON_DEFEAT_BEHAVIOUR.RESET:
+
                         break;
                 }
             }
@@ -54,6 +56,8 @@ public class LifeController : MonoBehaviour
         _maxHp = Mathf.Max(1, maxHp);
         SetHp(_currentHp);
     }
+
+
 
     private void Start()
     {

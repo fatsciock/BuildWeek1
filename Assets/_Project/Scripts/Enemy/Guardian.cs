@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Guardian : EnemyBase
+{
+    [SerializeField] private GameObject[] pattuglia; //gli empties che rappresentano il percorso dell'enemy
+    [SerializeField] private float _imprecisione = 0.25f; // i transform difficilmente saranno ==
+    private int _currentDir = 0;
+   
+
+
+     public override void Move()
+    {
+        _mover.UpdateDirection(pattuglia[_currentDir].transform.position - transform.position);
+        if (Vector2.Distance(transform.position, pattuglia[_currentDir].transform.position) < _imprecisione)
+        {
+            _currentDir++;
+            if (_currentDir == pattuglia.Length)
+            {
+                _currentDir = 0;
+            }
+        }
+    }
+
+    public override void Attack()
+    {
+        
+    }
+
+
+}

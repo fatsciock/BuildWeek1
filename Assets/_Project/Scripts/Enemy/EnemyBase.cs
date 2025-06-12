@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour
+public abstract class EnemyBase : MonoBehaviour
 {
     [SerializeField] private AbstractShooter _shooter;
-    [SerializeField] private LifeController _lifeController;
+    [SerializeField] public LifeController _lifeController {  get; private set; }
+    [SerializeField] protected TopDownMover2D _mover {get; set;}
     //[SerializeField] private GameObject _player;
 
     [SerializeField] protected Rigidbody2D _rb;
     [SerializeField] protected Collider2D _collider;
 
-    [SerializeField] protected float speed;
     [SerializeField] protected int dmg;
     //[SerializeField] private bool _canShoot;
     [SerializeField] protected int _dropRate;
@@ -22,13 +22,25 @@ public abstract class Enemy : MonoBehaviour
 
     [SerializeField] GameObject[] _weapons;
 
-    public virtual void Awake()
+    public virtual void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        if (_rb == null) Debug.Log("Manca il RigidBody!");
-
         _collider = GetComponent<Collider2D>();
         if (_collider == null) Debug.Log("Manca il collider!");
+
+        _mover = GetComponent<TopDownMover2D>();
+        if (_mover == null) Debug.Log("Manca il Mover!");
+
+        _lifeController = GetComponent<LifeController>();
+        if (_lifeController == null) Debug.Log("Mancano gli hp!");
+    }
+
+    public virtual void Update()
+    {
+    }
+
+    public virtual void FixedUpdate()
+    {
+        Move();
     }
 
     public void DropWeapon()
@@ -40,6 +52,10 @@ public abstract class Enemy : MonoBehaviour
             Instantiate(_weapons[chooseRandom]);
         }
     }
+    public abstract void Attack();
+
+    public abstract void Move();
+
 
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
@@ -50,17 +66,11 @@ public abstract class Enemy : MonoBehaviour
 
     //}
 
-    public virtual void Die()
-    {
-        DropWeapon();
-        Destroy(gameObject);
-    }
 
-    public abstract void Attack();
     //void Awake()
     //{
     //    _player = GameObject.FindWithTag("Player");
     //}
 
-    public abstract void Move();        
+
 }

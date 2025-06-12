@@ -8,6 +8,6 @@ public class ConstantShooter : AbstractShooter
 
     private void Update()
     {
-        TryShoot(_spawnPoint.position, _spawnPoint.up);
+        //TryShoot(_spawnPoint.position, _spawnPoint.up);
     }
 }

@@ -5,12 +5,15 @@ using UnityEngine;
 public abstract class AbstractShooter : MonoBehaviour
 {
     [SerializeField] private Bullet _bulletPrefab;
-    [SerializeField] private float _shotInterval = 0.5f;
+    [SerializeField] public float _shotInterval { get; private set; }
+    [SerializeField] public float _maxRange { get; private set; }
 
     private float _lastShotTime = 0;
 
-    public bool CanShoot()
+
+    public virtual bool CanShoot()
     {
+        
         return Time.time - _lastShotTime >= _shotInterval;
     }
 
@@ -22,10 +25,12 @@ public abstract class AbstractShooter : MonoBehaviour
         b.Shoot(position, direction);
     }
 
-    public void TryShoot(Vector3 position, Vector3 direction)
-    {
-        if (!CanShoot()) return;
+    //public void TryShoot(Vector3 position, Vector3 direction)
+    //{
+    //    if (!CanShoot()) return;
 
-        Shoot(position, direction);
-    }
+    //    Shoot(position, direction);
+    //}
+
+
 }
