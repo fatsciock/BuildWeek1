@@ -19,4 +19,12 @@ public class PlayerController : MonoBehaviour
         Vector2 dir = new Vector2(h, v);
         _mover.UpdateDirection(dir);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pickup"))
+        {
+            
+        }
+    }
 }

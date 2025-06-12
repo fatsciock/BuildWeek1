@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Pickup
+    uniqueID: 4139769135
+    locked: 0
+  - name: Bullet
+    uniqueID: 3300566775
+    locked: 0
+  - name: Character
+    uniqueID: 713057863
     locked: 0
