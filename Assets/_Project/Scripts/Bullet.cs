@@ -9,18 +9,13 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _lifeSpan = 5;
 
-    public void Shoot(Vector3 origin, Vector3 direction)
+    public void Shoot(Vector3 origin, Vector2 direction)
     {
         transform.position = origin;
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
-        Vector2 dir = direction;
-        float squaredLength = dir.sqrMagnitude;
-        if (squaredLength > 1)
-        {
-            dir /= Mathf.Sqrt(squaredLength);
-        }
+        Vector2 dir = direction.normalized;
 
         rb.velocity = dir * _speed;
     }

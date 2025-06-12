@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class LifeController : MonoBehaviour
 {
-    public enum ON_DEFEAT_BEHAVIOUR { DISABLE = 0, DESTROY = 1, NONE = 2 }
+    public enum ON_DEFEAT_BEHAVIOUR { DISABLE = 0, DESTROY = 1, NONE = 2, RESTART_SCENE = 3 }
 
     [SerializeField] private int _currentHp = 10;
     [SerializeField] private int _maxHp = 10;
     [SerializeField] private bool _fullHpOnStart = true;
-    [SerializeField] private ON_DEFEAT_BEHAVIOUR _onDefeatBehaviour = ON_DEFEAT_BEHAVIOUR.DISABLE;
+    [SerializeField] private ON_DEFEAT_BEHAVIOUR _onDefeatBehaviour = ON_DEFEAT_BEHAVIOUR.RESTART_SCENE;
 
     public int GetHp() => _currentHp;
     public int GetMaxHp() => _maxHp;
@@ -43,6 +43,9 @@ public class LifeController : MonoBehaviour
                         Destroy(gameObject);
                         break;
                     case ON_DEFEAT_BEHAVIOUR.NONE:
+                        break;
+                    case ON_DEFEAT_BEHAVIOUR.RESTART_SCENE:
+                        //TODO: Restart the scene
                         break;
                 }
             }
