@@ -131,7 +131,7 @@ MonoBehaviour:
   _currentHp: 10
   _maxHp: 10
   _fullHpOnStart: 1
-  _onDefeatBehaviour: 0
+  _onDefeatBehaviour: 1
 --- !u!114 &186296598945012144
 MonoBehaviour:
   m_ObjectHideFlags: 0
