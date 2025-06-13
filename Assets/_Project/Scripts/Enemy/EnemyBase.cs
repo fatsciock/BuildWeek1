@@ -49,7 +49,7 @@ public abstract class EnemyBase : MonoBehaviour
     public void DropWeapon()
     {
         int chance = Random.Range(0, 101);
-        if (_dropRate <= chance)
+        if (_dropRate >= chance)
         {
             Vector2 pos = transform.position;
             int chooseRandom = Random.Range(0, (_weapons.Length));

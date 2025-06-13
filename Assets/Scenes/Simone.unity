@@ -477,6 +477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kamikaze
       objectReference: {fileID: 0}
+    - target: {fileID: 7151034693250305676, guid: cae24f053b3bd084c98ce6d88d3788e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7823972809659138438, guid: cae24f053b3bd084c98ce6d88d3788e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.45
@@ -582,6 +586,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8609807212474507928, guid: cefe4d115b1d54f4abbcfe4c6c470885, type: 3}
+      propertyPath: _onDefeatBehaviour
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -637,6 +645,10 @@ PrefabInstance:
     - target: {fileID: 4065306444157133101, guid: 1bf8b64537cbeab4399f4d75fe8daf4f, type: 3}
       propertyPath: m_Name
       value: Guardian
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065306444157133101, guid: 1bf8b64537cbeab4399f4d75fe8daf4f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7261346246043724432, guid: 1bf8b64537cbeab4399f4d75fe8daf4f, type: 3}
       propertyPath: m_LocalPosition.x
