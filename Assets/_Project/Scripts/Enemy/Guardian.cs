@@ -40,9 +40,8 @@ public class Guardian : EnemyBase
         if (_enemyShooter == null) Debug.Log("Manca lo shooter!");
     }
 
-    public override void Update()
+    public void Update()
     {
-        base.Update();
         if (Vector2.Distance(_player.transform.position, transform.position) < _enemyShooter._maxRange)
         {
             Attack();
