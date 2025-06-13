@@ -259,8 +259,8 @@ MonoBehaviour:
   _player: {fileID: 0}
   _rb: {fileID: 0}
   _collider: {fileID: 0}
-  dmg: 0
-  _dropRate: 0
+  dmg: 1
+  _dropRate: 75
   _weapons:
   - {fileID: 5257785053288594, guid: c9e2b3f7a17d12944a4dc0c7304eb1ae, type: 3}
   - {fileID: 5257785053288594, guid: 3ec3aa406f3dc6e4db3f95552c2684ad, type: 3}

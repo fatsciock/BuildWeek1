@@ -194,7 +194,7 @@ MonoBehaviour:
   _currentHp: 10
   _maxHp: 10
   _fullHpOnStart: 1
-  _onDefeatBehaviour: 1
+  _onDefeatBehaviour: 2
 --- !u!95 &7943380373076749148
 Animator:
   serializedVersion: 5
