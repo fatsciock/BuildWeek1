@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3912877904715001207
+--- !u!1 &7246022810657229198
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6915134840846070623}
-  - component: {fileID: 2288895918774672006}
+  - component: {fileID: 4717360418008702913}
+  - component: {fileID: 7276955556331156500}
   m_Layer: 0
-  m_Name: BaseWeapon
+  m_Name: RandomRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6915134840846070623
+--- !u!4 &4717360418008702913
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3912877904715001207}
+  m_GameObject: {fileID: 7246022810657229198}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2288895918774672006
+--- !u!114 &7276955556331156500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3912877904715001207}
+  m_GameObject: {fileID: 7246022810657229198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c8e579d5b7245d48b7059bd9300ff48, type: 3}
+  m_Script: {fileID: 11500000, guid: 768698e91a198f749922a265fa7bb999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 0}
   _playerMover: {fileID: 0}
   _shotInterval: 1
-  _bulletDamage: 2
+  _bulletDamage: 1
   _bulletSpeed: 5
   _bulletLifeSpan: 5
   _bulletPrefab: {fileID: 894085333806758598, guid: 7f4d8dc4ac2787e43a19cc08d3685524, type: 3}
+  _shotsPerBurst: 3
+  _minAngle: 0
+  _maxAngle: 360

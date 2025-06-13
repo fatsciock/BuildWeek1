@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-    [SerializeField] private GameObject weaponPrefab;
+    [SerializeField] private AbstractGun weaponPrefab;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            GameObject newWeapon = Instantiate(weaponPrefab, collision.transform);
+            AbstractGun[] existingWeapons = collision.GetComponentsInChildren<AbstractGun>();
+
+            foreach (var weapon in existingWeapons)
+            {
+                if (weapon.GetType() == weaponPrefab.GetType())
+                {
+                    weapon.LevelUp();
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+
+            AbstractGun newWeapon = Instantiate(weaponPrefab, collision.transform);
 
             Destroy(gameObject); // Rimuove il pickup dal mondo
         }

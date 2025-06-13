@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun3 : GunBase
+public class Gun3 : AbstractGun
 {
+    [SerializeField] protected Bullet _bulletPrefab;
     [SerializeField] private int _shotsPerBurst = 3;
     [SerializeField] private float _minAngle = 0f;
     [SerializeField] private float _maxAngle = 360f;
@@ -28,8 +29,11 @@ public class Gun3 : GunBase
 
     public override void LevelUp()
     {
-        base.LevelUp();
-        _damage += 1;
+        if (_bulletDamage < 15)
+        {
+            base.LevelUp();
+            _bulletSpeed += 0.5f;
+        }
     }
 }
 

@@ -2,31 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class GunBase : MonoBehaviour
+public class GunBase : AbstractGun
 {
     [SerializeField] protected Bullet _bulletPrefab;
-    [SerializeField] protected Transform _spawnPoint;
-    [SerializeField] protected float _shotInterval = 1f;
-    [SerializeField] protected float _projectileSpeed = 5f;
-    [SerializeField] protected int _damage = 1;
 
-    private float _lastShotTime;
-
-    protected virtual void Update()
+    protected override void Shoot()
     {
-        if (Time.time - _lastShotTime >= _shotInterval)
+        Bullet b = Instantiate(_bulletPrefab);
+        if (_playerMover == null || !_playerMover.enabled)
         {
-            Shoot();
-            _lastShotTime = Time.time;
+            b.Shoot(_spawnPoint.position, new Vector2(_spawnPoint.right.x, _spawnPoint.right.y));
         }
-    }
-
-    protected abstract void Shoot();
-
-    public virtual void LevelUp()
-    {
-        _damage += 1;
-        _shotInterval *= 0.9f;
-        _projectileSpeed += 1f;
+        else
+        {
+            b.Shoot(_spawnPoint.position, _playerMover.LastDirection);
+        }
     }
 }

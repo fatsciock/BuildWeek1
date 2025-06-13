@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour
 {
-    [SerializeField] private AbstractShooter _shooter;
+    [SerializeField] private AbstractGun _shooter;
     [SerializeField] public LifeController _lifeController {  get; private set; }
     [SerializeField] protected TopDownMover2D _mover {get; set;}
     //[SerializeField] private GameObject _player;

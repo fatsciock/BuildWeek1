@@ -9,6 +9,13 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _lifeSpan = 5;
 
+    public Bullet(int damage, float speed, float lifeSpan)
+    {
+        _damage = damage;
+        _speed = speed;
+        _lifeSpan = lifeSpan;
+    }
+
     public void Shoot(Vector3 origin, Vector2 direction)
     {
         transform.position = origin;

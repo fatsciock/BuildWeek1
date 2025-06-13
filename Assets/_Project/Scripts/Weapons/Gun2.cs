@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun2 : GunBase
+public class Gun2 : AbstractGun
 {
+    [SerializeField] protected Bullet _bulletPrefab;
     [SerializeField] private int _bulletCount = 8;
 
     protected override void Shoot()
@@ -25,5 +26,21 @@ public class Gun2 : GunBase
     {
         Bullet b = Instantiate(_bulletPrefab);
         b.Shoot(_spawnPoint.position, direction);
+    }
+
+    public override void LevelUp()
+    {
+        if (_bulletDamage < 7)
+        {
+            _bulletDamage += 1;
+        }
+        if (_shotInterval > 0.5f)
+        {
+            _shotInterval *= 0.9f;
+        }
+        if (_bulletCount < 16)
+        {
+            _bulletCount += 1;
+        }
     }
 }
