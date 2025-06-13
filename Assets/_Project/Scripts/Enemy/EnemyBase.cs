@@ -8,7 +8,7 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField] private AbstractGun _shooter;
     [SerializeField] public LifeController _lifeController {  get; private set; }
     [SerializeField] protected TopDownMover2D _mover {get; set;}
-    //[SerializeField] private GameObject _player;
+    [SerializeField] protected GameObject _player;
 
     [SerializeField] protected Rigidbody2D _rb;
     [SerializeField] protected Collider2D _collider;
@@ -24,6 +24,9 @@ public abstract class EnemyBase : MonoBehaviour
 
     public virtual void Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player");
+        if (_player == null) Debug.Log("Manca il player!");
+
         _collider = GetComponent<Collider2D>();
         if (_collider == null) Debug.Log("Manca il collider!");
 
