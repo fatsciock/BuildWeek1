@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7151034693250305676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.004337152, w: 0.9999906}
-  m_LocalPosition: {x: -0.55788, y: -0.17, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1682407, y: 0.1682407, z: 0.1682407}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1893022917, guid: 6f95c3da745570f48b1b66e3c5c9b2e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -128,10 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5282a6a7ac434ed4b9096c2dc03ad939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHp: 10
-  _maxHp: 10
+  _currentHp: 3
+  _maxHp: 3
   _fullHpOnStart: 1
-  _onDefeatBehaviour: 0
+  _onDefeatBehaviour: 1
 --- !u!114 &186296598945012144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,14 +161,14 @@ MonoBehaviour:
   _player: {fileID: 0}
   _rb: {fileID: 0}
   _collider: {fileID: 0}
-  dmg: 0
-  _dropRate: 0
+  dmg: 3
+  _dropRate: 15
   _weapons:
   - {fileID: 5257785053288594, guid: c9e2b3f7a17d12944a4dc0c7304eb1ae, type: 3}
   - {fileID: 5257785053288594, guid: 3ec3aa406f3dc6e4db3f95552c2684ad, type: 3}
   - {fileID: 5257785053288594, guid: 7c0adc929e4bb364cb99ad25e99f4b8d, type: 3}
   _force: 0
-  _maxDistance: 5
+  _maxDistance: 7
 --- !u!70 &1700012892920656092
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

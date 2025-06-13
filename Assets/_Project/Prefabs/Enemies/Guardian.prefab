@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1605286559984969584}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.61, y: -0.12, z: 0.058306813}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -130,7 +130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 713057863
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 66f0092b57edc6c409f4a8e8e70e5d38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5282a6a7ac434ed4b9096c2dc03ad939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHp: 1
-  _maxHp: 1
+  _currentHp: 10
+  _maxHp: 10
   _fullHpOnStart: 1
   _onDefeatBehaviour: 1
 --- !u!114 &5905952255019259581
