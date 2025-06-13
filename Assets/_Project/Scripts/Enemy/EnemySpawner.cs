@@ -5,9 +5,9 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _enemyPrefab;
-    [SerializeField] private float _spawnInterval = 3f;
-    [SerializeField] private float _activationRange = 5f;
-    [SerializeField] private int _maxEnemies = 5;
+    [SerializeField] private float _spawnInterval = 5f;
+    [SerializeField] private float _activationRange = 15f;
+    [SerializeField] private int _maxEnemies = 7;
 
     private float _lastSpawnTime;
     private Transform _player;

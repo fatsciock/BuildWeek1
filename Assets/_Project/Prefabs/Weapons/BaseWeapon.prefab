@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 0}
   _playerMover: {fileID: 0}
-  _shotInterval: 1
+  _shotInterval: 0.7
   _bulletDamage: 2
   _bulletSpeed: 5
   _bulletLifeSpan: 5
