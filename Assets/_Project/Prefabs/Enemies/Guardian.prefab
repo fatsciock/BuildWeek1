@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 2670692190949300027}
   m_Layer: 7
   m_Name: Guardian
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,13 +221,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4065306444157133101}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5282a6a7ac434ed4b9096c2dc03ad939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHp: 15
-  _maxHp: 15
+  _currentHp: 1
+  _maxHp: 1
   _fullHpOnStart: 1
   _onDefeatBehaviour: 1
 --- !u!114 &5905952255019259581
@@ -261,7 +261,10 @@ MonoBehaviour:
   _collider: {fileID: 0}
   dmg: 0
   _dropRate: 0
-  _weapons: []
+  _weapons:
+  - {fileID: 5257785053288594, guid: c9e2b3f7a17d12944a4dc0c7304eb1ae, type: 3}
+  - {fileID: 5257785053288594, guid: 3ec3aa406f3dc6e4db3f95552c2684ad, type: 3}
+  - {fileID: 5257785053288594, guid: 7c0adc929e4bb364cb99ad25e99f4b8d, type: 3}
   pattuglia:
   - {fileID: 0}
   - {fileID: 0}
