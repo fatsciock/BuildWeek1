@@ -37,7 +37,7 @@ public class Kamikaze : EnemyBase
 
     public override void Attack()
     {
-        //_player.GetComponent<LifeController>().AddHp(-dmg);
+        _player.GetComponentInChildren<LifeController>().AddHp(-dmg);
         Vector2 _pushDir = ( _player.transform.position - transform.position ).normalized;
         _player.GetComponent<Rigidbody2D>().AddForce(_pushDir * _force, ForceMode2D.Impulse);
         Destroy(gameObject);
