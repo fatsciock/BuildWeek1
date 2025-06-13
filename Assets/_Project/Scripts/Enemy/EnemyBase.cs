@@ -5,10 +5,10 @@ using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour
 {
-    [SerializeField] private AbstractShooter _shooter;
+    [SerializeField] private AbstractGun _shooter;
     [SerializeField] public LifeController _lifeController {  get; private set; }
     [SerializeField] protected TopDownMover2D _mover {get; set;}
-    //[SerializeField] private GameObject _player;
+    [SerializeField] protected GameObject _player;
 
     [SerializeField] protected Rigidbody2D _rb;
     [SerializeField] protected Collider2D _collider;
@@ -24,6 +24,9 @@ public abstract class EnemyBase : MonoBehaviour
 
     public virtual void Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player");
+        if (_player == null) Debug.Log("Manca il player!");
+
         _collider = GetComponent<Collider2D>();
         if (_collider == null) Debug.Log("Manca il collider!");
 
@@ -34,14 +37,14 @@ public abstract class EnemyBase : MonoBehaviour
         if (_lifeController == null) Debug.Log("Mancano gli hp!");
     }
 
-    public virtual void Update()
-    {
-    }
-
     public virtual void FixedUpdate()
     {
         Move();
     }
+
+    public abstract void Attack();
+
+    public abstract void Move();
 
     public void DropWeapon()
     {
@@ -52,10 +55,6 @@ public abstract class EnemyBase : MonoBehaviour
             Instantiate(_weapons[chooseRandom]);
         }
     }
-    public abstract void Attack();
-
-    public abstract void Move();
-
 
     //private void OnCollisionEnter2D(Collision2D collision)
     //{

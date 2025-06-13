@@ -193,7 +193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shooter: {fileID: 0}
-  _lifeController: {fileID: 0}
   _rb: {fileID: 0}
   _collider: {fileID: 0}
   dmg: 0
@@ -201,3 +200,4 @@ MonoBehaviour:
   _weapons: []
   _player: {fileID: 0}
   _force: 0
+  _maxDistance: 5

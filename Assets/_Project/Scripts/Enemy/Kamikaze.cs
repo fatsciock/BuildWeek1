@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Kamikaze : EnemyBase
 {
-    [SerializeField] private GameObject _player;
+    // [SerializeField] private GameObject _player;
     [SerializeField] private float _force;
     [SerializeField] private float _maxDistance;
 
