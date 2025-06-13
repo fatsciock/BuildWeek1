@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 <<<<<<<< HEAD:Assets/_Project/Scripts/Enemy/EnemyBase.cs.meta
+<<<<<<< Updated upstream
 guid: d6386d9348c944c498c55da6e94e679a
+=======
+guid: fccdb02b7051bf949905f47f5c7feeae
+>>>>>>> Stashed changes
 ========
 guid: 99e2847bc76779c4c9fa82667259479e
 >>>>>>>> 968f9f1ad7a6f45c3fae704b429c659119ab0f4f:Assets/_Project/Scripts/Weapons/WeaponPickup.cs.meta

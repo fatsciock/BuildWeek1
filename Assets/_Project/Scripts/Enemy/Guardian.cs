@@ -6,9 +6,10 @@ public class Guardian : EnemyBase
 {
     [SerializeField] private GameObject[] pattuglia; //gli empties che rappresentano il percorso dell'enemy
     [SerializeField] private float _imprecisione = 0.25f; // i transform difficilmente saranno ==
+    public float _maxRange = 8f;
 
 
-    private EnemyShooter _enemyShooter;
+    private EnemyGun _enemyShooter;
     private int _currentDir = 0;
 
     //[SerializeField] private GameObject _spawnPoint;  
@@ -27,24 +28,10 @@ public class Guardian : EnemyBase
         }
     }
 
-    public override void Attack()
-    {
-        _enemyShooter.EvaluateSpawnPoint();
-        _enemyShooter.TryShoot(_enemyShooter.pos,  _player.transform.position - _enemyShooter.pos  );            
-    }
+    public override void Attack(){}
 
     public override void Start()
     {
         base.Start();
-        _enemyShooter = GetComponent<EnemyShooter>();
-        if (_enemyShooter == null) Debug.Log("Manca lo shooter!");
-    }
-
-    public void Update()
-    {
-        if (Vector2.Distance(_player.transform.position, transform.position) < _enemyShooter._maxRange)
-        {
-            Attack();
-        }
     }
 }
