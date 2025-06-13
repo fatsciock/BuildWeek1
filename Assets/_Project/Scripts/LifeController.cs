@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LifeController : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class LifeController : MonoBehaviour
                         gameObject.GetComponent<EnemyBase>().DropWeapon();
                         break;
                     case ON_DEFEAT_BEHAVIOUR.RESTART_SCENE:
-                        //TODO: Restart the scene
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                         break;
                 }
             }
