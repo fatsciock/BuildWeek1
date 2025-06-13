@@ -31,9 +31,9 @@ public class TopDownMover2D : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_direction != Vector2.zero)
-        {
-            _rb.MovePosition( _rb.position + _direction * (_speed * Time.deltaTime) );
-        }
+        //if (_direction != Vector2.zero)
+        //{
+            _rb.MovePosition( _rb.position + _direction * (_speed * Time.deltaTime));
+        //}
     }
 }

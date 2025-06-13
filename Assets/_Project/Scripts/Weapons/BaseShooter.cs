@@ -15,7 +15,7 @@ public class BaseShooter : AbstractShooter
         }
         else
         {
-            Debug.Log($"Sparo verso: {mover.LastDirection}");
+            //Debug.Log($"Sparo verso: {mover.LastDirection}");
             TryShoot(_spawnPoint.position, mover.LastDirection);
         }
     }
