@@ -51,8 +51,9 @@ public abstract class EnemyBase : MonoBehaviour
         int chance = Random.Range(0, 101);
         if (_dropRate <= chance)
         {
-            int chooseRandom = Random.Range(0, 4);
-            Instantiate(_weapons[chooseRandom]);
+            Vector2 pos = transform.position;
+            int chooseRandom = Random.Range(0, (_weapons.Length));
+            Instantiate(_weapons[chooseRandom], new Vector3(pos.x, pos.y, 0), Quaternion.identity);
         }
     }
 
