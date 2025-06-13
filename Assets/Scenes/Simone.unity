@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &124907738
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -574,6 +574,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7597685015343597836, guid: cefe4d115b1d54f4abbcfe4c6c470885, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7597685015343597836, guid: cefe4d115b1d54f4abbcfe4c6c470885, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -630,14 +638,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guardian
       objectReference: {fileID: 0}
-    - target: {fileID: 6108480109721679520, guid: 1bf8b64537cbeab4399f4d75fe8daf4f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 6108480109721679520, guid: 1bf8b64537cbeab4399f4d75fe8daf4f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.08
-      objectReference: {fileID: 0}
     - target: {fileID: 7261346246043724432, guid: 1bf8b64537cbeab4399f4d75fe8daf4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2714399
@@ -678,7 +678,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3075251465938793088, guid: 1bf8b64537cbeab4399f4d75fe8daf4f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

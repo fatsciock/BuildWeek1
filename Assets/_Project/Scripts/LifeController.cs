@@ -41,8 +41,9 @@ public class LifeController : MonoBehaviour
                         gameObject.SetActive(false);
                         break;
                     case ON_DEFEAT_BEHAVIOUR.DESTROY:
-                        gameObject.GetComponent<EnemyBase>().DropWeapon();
                         Destroy(gameObject);
+
+                        gameObject.GetComponent<EnemyBase>().DropWeapon();
                         break;
                     case ON_DEFEAT_BEHAVIOUR.RESTART_SCENE:
                         //TODO: Restart the scene

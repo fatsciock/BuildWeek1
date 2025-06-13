@@ -216,7 +216,10 @@ MonoBehaviour:
   _collider: {fileID: 0}
   dmg: 0
   _dropRate: 0
-  _weapons: []
+  _weapons:
+  - {fileID: 5257785053288594, guid: c9e2b3f7a17d12944a4dc0c7304eb1ae, type: 3}
+  - {fileID: 5257785053288594, guid: 3ec3aa406f3dc6e4db3f95552c2684ad, type: 3}
+  - {fileID: 5257785053288594, guid: 7c0adc929e4bb364cb99ad25e99f4b8d, type: 3}
   pattuglia:
   - {fileID: 0}
   - {fileID: 0}
