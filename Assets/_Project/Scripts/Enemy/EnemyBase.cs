@@ -34,14 +34,14 @@ public abstract class EnemyBase : MonoBehaviour
         if (_lifeController == null) Debug.Log("Mancano gli hp!");
     }
 
-    public virtual void Update()
-    {
-    }
-
     public virtual void FixedUpdate()
     {
         Move();
     }
+
+    public abstract void Attack();
+
+    public abstract void Move();
 
     public void DropWeapon()
     {
@@ -52,10 +52,6 @@ public abstract class EnemyBase : MonoBehaviour
             Instantiate(_weapons[chooseRandom]);
         }
     }
-    public abstract void Attack();
-
-    public abstract void Move();
-
 
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
